@@ -105,7 +105,7 @@ Edit `backend/.env`:
 
 ```env
 PORT=5000                                      # Backend port
-MONGODB_URI=mongodb://localhost:27017/linkvault  # MongoDB connection
+MONGODB_URI=mongodb+srv://userid:<db_password>@linkvault.aniqh8s.mongodb.net/?appName=Linkvault  # MongoDB connection
 UPLOADS_DIR=./uploads                          # Where files are stored
 ALLOWED_MIME_TYPES=                            # Optional CSV MIME allowlist
 ```
