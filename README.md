@@ -148,6 +148,17 @@ Logged-in users can create links restricted to their own account.
   - Periodic cleanup job that removes expired DB records and files.
 - Optional security controls (password, one-time view, max views, owner-only) are enforced in backend logic.
 
+## Assumptions
+
+- MongoDB is available (local instance or Atlas).
+- Link secrecy is part of access control (no public listing/search endpoint exists).
+- Creator manually keeps the delete token after upload for manual deletion.
+
+## Limitations
+
+- Passwords are hashed with `crypto.scrypt`; however, no MFA/email verification is implemented.
+- Cleanup runs every 5 minutes, so expired records may exist briefly before background deletion.
+- File type allowlisting is opt-in (disabled by default to keep base "any file format" behavior).
 
 
 ## File Storage
